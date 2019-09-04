@@ -1,0 +1,76 @@
+Glossaire (dictionnaire des données) / bibliothèque
+
+Terme/entité/classe
+Définition
+caractéristiques (attributs internes ou relation)
+OeuvreLittéraire
+infos sur oeuvre littéraire
+numISBN(id)
+titre , auteur, editeur
+Exemplaire
+exemplaire physique  d'une oeuvre
+numero (id)
+etatPhysique (BON , ABIME, HS)
+usage (DISPO, EMPRUNT, EN_RESTAURATION)
+lien_avec_oeuvre
+Abonné
+Personne inscrite à la bibliothèque pouvant emprunter des livres sur une période donnée
+(hérite de Personne)
+numero (id/pk)
+adresse (sous objet Coordonnees)
+dateNaissance
+Employé
+Personne par la bibliotheque : Bibliothécaire ou 
+responsable abonnement
+(hérite de Personne)
+id,rôle,
+username , password.
+Emprunt
+infos sur un emprunt en cours ou passé effectué par un abonné et concernant un  
+exemplaire précis
+numéro (id)
+lien_avec_abonné
+lien_avec_exemplaire
+date_début
+date_retour
+Inscription/Abonnement ?
+....
+v2
+Contentieux
+contentieux entre abonné et la bibliothèque concernant un emprunt précis
+numero (id)
+lien_avec_emprunt
+type (RETARD, DETERIORATION, ...)
+date
+etat (EN_COURS, REGLE, ...)
+Notification
+
+V2
+Personne
+
+nom , prenom
+Coordonnees
+
+rue, codePostal, ville
+...
+
+
+
+
+
+
+regroupement en packages fonctionnels :
+
+package
+classes du package
+dépendances
+livres
+OeuvreLittéraire , Exemplaire
+
+individus
+Personne, Abonné , Employé , Coordonnées
+
+gestion
+Emprunt, Contentieux
+individus, livres
+
